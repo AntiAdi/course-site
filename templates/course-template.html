@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{TITLE}} | {{SITE_NAME}}</title>
+    <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+
+    <nav class="nav-bar">
+        <div class="container">
+            <a href="../index.html">&larr; Back to all courses</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="course-header">
+            <h1>{{TITLE}}</h1>
+            <p>{{SHORT_DESC}}</p>
+        </div>
+
+        <div class="video-wrapper">
+            <iframe src="{{YT_LINK}}" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <div class="course-layout">
+            <div class="course-description">
+                <div class="image-wrapper" style="text-align: center; margin-bottom: 40px;">
+                    <img src="{{IMG_LINK}}" alt="{{TITLE}}" onerror="this.style.display='none'">
+                </div>
+                <h2>Overview</h2>
+                <p style="white-space: pre-wrap;">{{LONG_DESC}}</p>
+            </div>
+
+            <div>
+                <div class="checkout-box">
+                    <div class="price-tag">${{PRICE}}</div>
+                    <a href="{{PAYMENT_LINK}}" target="_blank" class="btn btn-primary btn-full">Buy Now</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer style="text-align: center; padding: 40px 0; margin-top: 80px; border-top: 1px solid var(--border-color); color: var(--text-secondary); font-size: 0.9rem;">
+        <div class="container">
+            <p>{{FOOTER_TEXT}}</p>
+        </div>
+    </footer>
+
+    <script src="../assets/script.js"></script>
+</body>
+</html>

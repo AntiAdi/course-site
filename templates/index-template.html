@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{SITE_NAME}}</title>
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <h1>{{HERO_TITLE}}</h1>
+            <p>{{HERO_SUBTITLE}}</p>
+        </div>
+    </header>
+
+    <section class="catalog">
+        <div class="container">
+            <div class="course-grid">
+                {{COURSE_CARDS}}
+            </div>
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 40px 0; color: var(--text-secondary); font-size: 0.9rem;">
+        <div class="container">
+            <p>{{FOOTER_TEXT}}</p>
+        </div>
+    </footer>
+
+    <script src="assets/script.js"></script>
+</body>
+</html>

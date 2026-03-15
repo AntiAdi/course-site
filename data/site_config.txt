@@ -1,0 +1,4 @@
+SITE_NAME=Get Courses
+HERO_TITLE=Aadityaraj Kaushal
+HERO_SUBTITLE=Self Help Simplified.
+FOOTER_TEXT=© 2026 Aadityaraj Kaushal. All rights reserved.
