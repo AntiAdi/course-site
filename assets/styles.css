@@ -2,6 +2,7 @@
 /* ULTRA-MINIMAL APPLE-INSPIRED THEME        */
 /* ========================================= */
 :root {
+    /* Light Mode (Default) */
     --bg-main: #ffffff;
     --bg-surface: #f5f5f7;      /* Classic Apple light gray */
     --text-primary: #1d1d1f;    /* Apple's charcoal black */
@@ -9,6 +10,17 @@
     --accent-blue: #0071e3;     /* Apple's primary CTA blue */
     --accent-hover: #0077ed;
     --border-color: #d2d2d7;
+}
+
+body.dark-theme {
+    /* Dark Mode Overrides */
+    --bg-main: #000000;         /* True black */
+    --bg-surface: #1c1c1e;      /* Apple dark surface */
+    --text-primary: #f5f5f7;    /* Off-white text */
+    --text-secondary: #a1a1a6;  /* Muted dark-mode gray */
+    --accent-blue: #0a84ff;     /* Apple's dark mode blue */
+    --accent-hover: #409cff;
+    --border-color: #38383a;
 }
 
 * {
@@ -24,6 +36,7 @@ body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     letter-spacing: -0.01em;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth fade for dark mode */
 }
 
 .container {
@@ -83,6 +96,25 @@ a {
 }
 
 /* ========================================= */
+/* THEME TOGGLE BUTTON                       */
+/* ========================================= */
+.theme-toggle-btn {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    padding: 8px 16px;
+    border-radius: 980px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-family: inherit;
+    transition: all 0.2s ease;
+}
+
+.theme-toggle-btn:hover {
+    background-color: var(--bg-surface);
+}
+
+/* ========================================= */
 /* INDEX PAGE (STOREFRONT)                   */
 /* ========================================= */
 .header {
@@ -132,6 +164,11 @@ a {
     margin-bottom: 24px;
 }
 
+body.dark-theme .course-image, 
+body.dark-theme .image-wrapper img {
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.02); /* Adjust shadow for dark mode */
+}
+
 .course-info h3 {
     font-size: 1.8rem;
     margin-bottom: 8px;
@@ -148,12 +185,16 @@ a {
 /* ========================================= */
 .nav-bar {
     padding: 16px 0;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(var(--bg-main-rgb, 255, 255, 255), 0.8);
     backdrop-filter: saturate(180%) blur(20px); /* Apple glass effect */
     border-bottom: 1px solid var(--border-color);
     position: sticky;
     top: 0;
     z-index: 100;
+}
+
+body.dark-theme .nav-bar {
+    background: rgba(0, 0, 0, 0.8); /* Dark glass effect */
 }
 
 .nav-bar a {
@@ -191,6 +232,10 @@ a {
     border-radius: 20px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
     margin-bottom: 40px;
+}
+
+body.dark-theme .video-wrapper {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5); /* Stronger shadow in dark mode to separate from bg */
 }
 
 .video-wrapper iframe {

@@ -79,15 +79,12 @@ def build_site(db):
         page_html = page_html.replace('{{IMG_LINK}}', course_img)
         page_html = page_html.replace('{{PAYMENT_LINK}}', data['payment_link'])
 
-        # Save to the new courses folder
+    # Save to the new courses folder (forces overwrite)
         file_path = os.path.join(OUTPUT_DIR, f'course-{course_id}.html')
         
-        if os.path.exists(file_path):
-            print(f"  -> Skipped {file_path} (Protected to preserve manual changes)")
-        else:
-            with open(file_path, 'w') as f:
-                f.write(page_html)
-            print(f"  -> Generated {file_path}")
+        with open(file_path, 'w') as f:
+            f.write(page_html)
+        print(f"  -> Generated/Updated {file_path}")
 
     # Generate Main Index Page to root
     final_index = index_template
