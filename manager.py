@@ -49,14 +49,23 @@ def build_site(db):
     cards_html = ""
 
     for course_id, data in db.items():
-        # Storefront Card: Notice the href now points to the courses/ folder
+        # Check if the course is locked via '_' prefix
+        standard_file_path = os.path.join(OUTPUT_DIR, f'course-{course_id}.html')
+        locked_file_path = os.path.join(OUTPUT_DIR, f'_course-{course_id}.html')
+        
+        is_locked = os.path.exists(locked_file_path)
+        
+        # Point the storefront link to the locked file if it exists, otherwise use standard
+        target_href = f"{OUTPUT_DIR}/_course-{course_id}.html" if is_locked else f"{OUTPUT_DIR}/course-{course_id}.html"
+
+        # Storefront Card
         card = f"""
         <div class="course-card">
             <img src="{data['img_link']}" alt="{data['title']}" class="course-image">
             <div class="course-info">
                 <h3>{data['title']}</h3>
                 <p>{data['short_desc']}</p>
-                <a href="{OUTPUT_DIR}/course-{course_id}.html" class="btn btn-primary btn-full" style="margin-top: auto;">View Course</a>
+                <a href="{target_href}" class="btn btn-primary btn-full" style="margin-top: auto;">View Course</a>
             </div>
         </div>
         """
@@ -66,6 +75,11 @@ def build_site(db):
         course_img = data['img_link']
         if not course_img.startswith('http') and not course_img.startswith('../'):
             course_img = '../' + course_img # Fixes the path dynamically!
+
+        # Skip regenerating the HTML file if it is locked
+        if is_locked:
+            print(f"  -> Skipped {locked_file_path} (Locked via '_' prefix)")
+            continue
 
         # Build Individual Course Page
         page_html = course_template
@@ -79,12 +93,10 @@ def build_site(db):
         page_html = page_html.replace('{{IMG_LINK}}', course_img)
         page_html = page_html.replace('{{PAYMENT_LINK}}', data['payment_link'])
 
-    # Save to the new courses folder (forces overwrite)
-        file_path = os.path.join(OUTPUT_DIR, f'course-{course_id}.html')
-        
-        with open(file_path, 'w') as f:
+        # Save to the new courses folder (forces overwrite of unlocked files)
+        with open(standard_file_path, 'w') as f:
             f.write(page_html)
-        print(f"  -> Generated/Updated {file_path}")
+        print(f"  -> Generated/Updated {standard_file_path}")
 
     # Generate Main Index Page to root
     final_index = index_template
@@ -145,9 +157,16 @@ def main():
             if course_id in db:
                 del db[course_id]
                 save_db(db)
-                file_path = os.path.join(OUTPUT_DIR, f'course-{course_id}.html')
-                if os.path.exists(file_path):
-                    os.remove(file_path)
+                
+                # Check and remove standard and locked files
+                standard_file = os.path.join(OUTPUT_DIR, f'course-{course_id}.html')
+                locked_file = os.path.join(OUTPUT_DIR, f'_course-{course_id}.html')
+                
+                if os.path.exists(standard_file):
+                    os.remove(standard_file)
+                if os.path.exists(locked_file):
+                    os.remove(locked_file)
+                    
                 print(f"\n[+] Course removed.")
                 build_site(db)
             else:
