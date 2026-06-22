@@ -57,7 +57,7 @@ def optimize_images():
             file_size_kb = os.path.getsize(filepath) / 1024
 
             # If the image is larger than 300KB, optimize it
-            if file_size_kb > 300:
+            if file_size_kb > 1000:
                 print(f"     [>] Optimizing {filename} (Original: {file_size_kb:.0f} KB)...")
                 try:
                     with Image.open(filepath) as img:
