@@ -1,29 +1,110 @@
 {
-    "dress-better": {
-        "title": "FULL Guide to Dress Way Better and Look Appealing as a College Student",
-        "short_desc": "No BS Practical Guide To Mog Using Aesthetics And Improve Your Presence",
+    "mental": {
+        "title": "Mental Health Guide - Beginners",
+        "short_desc": "The Feeling You Get After Exercising And Then A Cold Shower? Maintain It 24/7",
         "long_desc": "",
-        "price": "5997",
-        "yt_link": "example.link",
-        "img_link": "assets/images/dress-better.png",
-        "payment_link": "https://rzp.io/rzp/course-dress-better"
+        "price": "2997",
+        "yt_link": "",
+        "img_link": "assets/images/mental.png",
+        "payment_link": "https://rzp.io/rzp/pre-sale-courses"
     },
-    "escape-college": {
-        "title": "FULL Guide to Surviving College as Someone Who Hates It",
-        "short_desc": "Navigate College Without Being A Slave To It",
+    "digital-detox": {
+        "title": "Digital Detox Guide",
+        "short_desc": "Learn All Different Types Of Digital Detoxes And Multiply Your Brain Points By 100x",
         "long_desc": "",
-        "price": "5997",
-        "yt_link": "https://www.youtube.com/embed/BHACKCNDMW8?list=RDBHACKCNDMW8",
-        "img_link": "./assets/images/escape-college.png",
-        "payment_link": "https://rzp.io/rzp/course-escape-college"
+        "price": "2997",
+        "yt_link": "",
+        "img_link": "assets/images/digital-detox.png",
+        "payment_link": "https://rzp.io/rzp/pre-sale-courses"
     },
-    "getting-girls": {
-        "title": "FULL Guide to Getting Girls As A College Student",
-        "short_desc": "Build From Zero And Put Your First Step Into The Game Of Charm",
+    "trm-player": {
+        "title": "The Rational Male - Player\u2019s Guide",
+        "short_desc": "Learn The Most Synthesized Version Of The Hardest Hitting Red Pill Book EVER Written",
         "long_desc": "",
-        "price": "5997",
-        "yt_link": "https://www.youtube.com/embed/BHACKCNDMW8?list=RDBHACKCNDMW8",
-        "img_link": "./assets/images/getting-girls.png",
-        "payment_link": "https://rzp.io/rzp/course-getting-girls"
+        "price": "2997",
+        "yt_link": "",
+        "img_link": "assets/images/trm-player.png",
+        "payment_link": "https://rzp.io/rzp/pre-sale-courses"
+    },
+    "first-girl": {
+        "title": "Getting Your First Ever Girlfriend ",
+        "short_desc": "Go From Redditor Incel Nerd To Actually Holding A REAL Girl's Soft Hands",
+        "long_desc": "",
+        "price": "2997",
+        "yt_link": "",
+        "img_link": "assets/images/first-girl.png",
+        "payment_link": "https://rzp.io/rzp/pre-sale-courses"
+    },
+    "transurf": {
+        "title": "Reality Transurfing - Practical Guide",
+        "short_desc": "Learn The Most Synthesized Version Of The Hardest Written Book In The History Of Self Improvement",
+        "long_desc": "",
+        "price": "2997",
+        "yt_link": "",
+        "img_link": "assets/images/transurf.png",
+        "payment_link": "https://rzp.io/rzp/pre-sale-courses"
+    },
+    "easy-looksmaxxing": {
+        "title": "No Brainer Looksmaxxing To Look Hot af",
+        "short_desc": "Everybody Loves Hot People - Be ONE",
+        "long_desc": "",
+        "price": "2997",
+        "yt_link": "",
+        "img_link": "assets/images/easy-looksmaxxing.png",
+        "payment_link": "https://rzp.io/rzp/pre-sale-courses"
+    },
+    "home-gym": {
+        "title": "Home to Gym Guide For Starters",
+        "short_desc": "Start Exercising At Home And Transition Un-Awkwardly To A Nearby Gym (Light Weight Babyyy)",
+        "long_desc": "",
+        "price": "2997",
+        "yt_link": "",
+        "img_link": "assets/images/home-gym.png",
+        "payment_link": "https://rzp.io/rzp/pre-sale-courses"
+    },
+    "diet-veg": {
+        "title": "Gym Diet For Vegetarians",
+        "short_desc": "Clutch Your Veg Diet For Gym-Maxxing",
+        "long_desc": "",
+        "price": "2997",
+        "yt_link": "",
+        "img_link": "assets/images/diet-veg.png",
+        "payment_link": "https://rzp.io/rzp/pre-sale-courses"
+    },
+    "learning-systems": {
+        "title": "Self Learning Systems",
+        "short_desc": "Build The Most GOATed Self Learning System And Beat All In Intellect",
+        "long_desc": "",
+        "price": "2997",
+        "yt_link": "",
+        "img_link": "assets/images/learning-systems.png",
+        "payment_link": "https://rzp.io/rzp/pre-sale-courses"
+    },
+    "first-date": {
+        "title": "First Date Mastery",
+        "short_desc": "Give Yourself And Her The Best Moments Of Your Life",
+        "long_desc": "",
+        "price": "2997",
+        "yt_link": "",
+        "img_link": "assets/images/first-date.png",
+        "payment_link": "https://rzp.io/rzp/pre-sale-courses"
+    },
+    "cut-off-losers": {
+        "title": "Cutting Off Bad Friends Strategic Guide",
+        "short_desc": "Gradually Cut Off ALL Of Your Loser Friends And Get Better And Better In Life (And Them)",
+        "long_desc": "",
+        "price": "2997",
+        "yt_link": "",
+        "img_link": "assets/images/cut-off-losers.png",
+        "payment_link": "https://rzp.io/rzp/pre-sale-courses"
+    },
+    "do-not-do": {
+        "title": "Things You Shouldn\u2019t Be Doing As A Young Man",
+        "short_desc": "Knowing What To Do Is DIFFICULT, Knowing What NOT To Do Is EASY",
+        "long_desc": "",
+        "price": "2997",
+        "yt_link": "",
+        "img_link": "assets/images/do-not-do.png",
+        "payment_link": "https://rzp.io/rzp/pre-sale-courses"
     }
 }
