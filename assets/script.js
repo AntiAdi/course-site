@@ -58,23 +58,3 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
-
-document.addEventListener("DOMContentLoaded", function() {
-    // 1. Select the element you want to change (e.g., the h1 tag)
-    const titleElement = document.querySelector('h1'); 
-
-    // 2. Make sure the element exists and actually contains a dot
-    if (titleElement && titleElement.textContent.includes('.')) {
-        
-        // 3. Split the text at the first dot
-        const text = titleElement.textContent;
-        const dotIndex = text.indexOf('.');
-        
-        // 4. Separate the text into two pieces
-        const firstPart = text.substring(0, dotIndex);
-        const restOfText = text.substring(dotIndex); // Includes the dot and everything after
-        
-        // 5. Update the HTML with the first part wrapped in a red span
-        titleElement.innerHTML = `<span style="color: red;">${firstPart}</span>${restOfText}`;
-    }
-});
