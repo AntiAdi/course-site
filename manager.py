@@ -1,6 +1,12 @@
 import json
 import os
 
+try:
+    from PIL import Image
+    HAS_PILLOW = True
+except ImportError:
+    HAS_PILLOW = False
+
 DB_FILE = 'data/courses.json'
 CONFIG_FILE = 'data/site_config.txt'
 TEMPLATE_DIR = 'templates'
@@ -33,8 +39,47 @@ def load_config():
                     config[key.strip()] = value.strip()
     return config
 
+def optimize_images():
+    """Crushes large PNG files in place to speed up website loading."""
+    if not HAS_PILLOW:
+        print("  -> [!] Pillow library not installed. Skipping image optimization.")
+        print("  -> [!] To enable, run: pip install Pillow")
+        return
+
+    img_dir = 'assets/images'
+    if not os.path.exists(img_dir):
+        return
+
+    print("  -> Checking for bulky images...")
+    for filename in os.listdir(img_dir):
+        if filename.lower().endswith('.png'):
+            filepath = os.path.join(img_dir, filename)
+            file_size_kb = os.path.getsize(filepath) / 1024
+
+            # If the image is larger than 300KB, optimize it
+            if file_size_kb > 300:
+                print(f"     [>] Optimizing {filename} (Original: {file_size_kb:.0f} KB)...")
+                try:
+                    with Image.open(filepath) as img:
+                        # Resize to a max web-friendly dimension of 800x800
+                        # This keeps it crisp but drastically reduces PNG weight
+                        max_size = (700, 700)
+                        img.thumbnail(max_size, Image.Resampling.LANCZOS)
+                        
+                        # Save it in place, overwriting the original file
+                        img.save(filepath, "PNG", optimize=True)
+                        
+                    new_size = os.path.getsize(filepath) / 1024
+                    print(f"         Done! New size: {new_size:.0f} KB")
+                except Exception as e:
+                    print(f"         Failed to optimize {filename}: {e}")
+
 def build_site(db):
     print("\n[+] Rebuilding website...")
+    
+    # Run the image optimizer before generating pages
+    optimize_images()
+    
     config = load_config()
     
     try:
