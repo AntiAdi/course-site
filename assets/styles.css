@@ -286,7 +286,3 @@ body.dark-theme .video-wrapper {
 }
 
 
-/* Hide the entire video wrapper if the iframe src is empty */
-.video-wrapper:has(iframe[src=""]) {
-    display: none;
-}

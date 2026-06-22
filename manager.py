@@ -89,7 +89,20 @@ def build_site(db):
         page_html = page_html.replace('{{SHORT_DESC}}', data['short_desc'])
         page_html = page_html.replace('{{LONG_DESC}}', data['long_desc'])
         page_html = page_html.replace('{{PRICE}}', data['price'])
-        page_html = page_html.replace('{{YT_LINK}}', data['yt_link'])
+        
+        # --- THE FIX: Conditional Video Section ---
+        if data['yt_link'].strip():  # If the link is NOT empty
+            video_block = f"""
+        <div class="video-wrapper">
+            <iframe src="{data['yt_link']}" frameborder="0" allowfullscreen></iframe>
+        </div>
+            """
+        else:  # If the link IS empty
+            video_block = ""
+            
+        page_html = page_html.replace('{{VIDEO_SECTION}}', video_block)
+        # ----------------------------------------
+        
         page_html = page_html.replace('{{IMG_LINK}}', course_img)
         page_html = page_html.replace('{{PAYMENT_LINK}}', data['payment_link'])
 
