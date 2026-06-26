@@ -1,29 +1,11 @@
 {
     "mental": {
-        "title": "Mental Health Guide - Beginners",
+        "title": "Mental Health Guide For Indians",
         "short_desc": "The Feeling You Get After Exercising And Then A Cold Shower? Maintain It 24/7",
         "long_desc": "",
         "price": "2997",
         "yt_link": "",
         "img_link": "assets/images/mental.png",
-        "payment_link": "https://rzp.io/rzp/kaushalcoaching"
-    },
-    "digital-detox": {
-        "title": "Digital Detox Guide",
-        "short_desc": "Learn All Different Types Of Digital Detoxes And Multiply Your Brain Points By 100x",
-        "long_desc": "",
-        "price": "2997",
-        "yt_link": "",
-        "img_link": "assets/images/digital-detox.png",
-        "payment_link": "https://rzp.io/rzp/kaushalcoaching"
-    },
-    "trm-player": {
-        "title": "The Rational Male - Player\u2019s Guide",
-        "short_desc": "Learn The Most Synthesized Version Of The Hardest Hitting Red Pill Book EVER Written",
-        "long_desc": "",
-        "price": "2997",
-        "yt_link": "",
-        "img_link": "assets/images/trm-player.png",
         "payment_link": "https://rzp.io/rzp/kaushalcoaching"
     },
     "first-girl": {
@@ -42,69 +24,6 @@
         "price": "2997",
         "yt_link": "",
         "img_link": "assets/images/transurf.png",
-        "payment_link": "https://rzp.io/rzp/kaushalcoaching"
-    },
-    "easy-looksmaxxing": {
-        "title": "No Brainer Looksmaxxing To Look Hot af",
-        "short_desc": "Everybody Loves Hot People - Be ONE",
-        "long_desc": "",
-        "price": "2997",
-        "yt_link": "",
-        "img_link": "assets/images/easy-looksmaxxing.png",
-        "payment_link": "https://rzp.io/rzp/kaushalcoaching"
-    },
-    "home-gym": {
-        "title": "Home to Gym Guide For Starters",
-        "short_desc": "Start Exercising At Home And Transition Un-Awkwardly To A Nearby Gym (Light Weight Babyyy)",
-        "long_desc": "",
-        "price": "2997",
-        "yt_link": "",
-        "img_link": "assets/images/home-gym.png",
-        "payment_link": "https://rzp.io/rzp/kaushalcoaching"
-    },
-    "diet-veg": {
-        "title": "Gym Diet For Vegetarians",
-        "short_desc": "Clutch Your Veg Diet For Gym-Maxxing",
-        "long_desc": "",
-        "price": "2997",
-        "yt_link": "",
-        "img_link": "assets/images/diet-veg.png",
-        "payment_link": "https://rzp.io/rzp/kaushalcoaching"
-    },
-    "learning-systems": {
-        "title": "Self Learning Systems",
-        "short_desc": "Build The Most GOATed Self Learning System And Beat All In Intellect",
-        "long_desc": "",
-        "price": "2997",
-        "yt_link": "",
-        "img_link": "assets/images/learning-systems.png",
-        "payment_link": "https://rzp.io/rzp/kaushalcoaching"
-    },
-    "first-date": {
-        "title": "First Date Mastery",
-        "short_desc": "Give Yourself And Her The Best Moments Of Your Life",
-        "long_desc": "",
-        "price": "2997",
-        "yt_link": "",
-        "img_link": "assets/images/first-date.png",
-        "payment_link": "https://rzp.io/rzp/kaushalcoaching"
-    },
-    "cut-off-losers": {
-        "title": "Cutting Off Bad Friends Strategic Guide",
-        "short_desc": "Gradually Cut Off ALL Of Your Loser Friends And Get Better And Better In Life (And Them)",
-        "long_desc": "",
-        "price": "2997",
-        "yt_link": "",
-        "img_link": "assets/images/cut-off-losers.png",
-        "payment_link": "https://rzp.io/rzp/kaushalcoaching"
-    },
-    "do-not-do": {
-        "title": "Things You Shouldn\u2019t Be Doing As A Young Man",
-        "short_desc": "Knowing What To Do Is DIFFICULT, Knowing What NOT To Do Is EASY",
-        "long_desc": "",
-        "price": "2997",
-        "yt_link": "",
-        "img_link": "assets/images/do-not-do.png",
         "payment_link": "https://rzp.io/rzp/kaushalcoaching"
     }
 }
